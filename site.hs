@@ -9,6 +9,7 @@ config :: Configuration
 config =
   defaultConfiguration
     { destinationDirectory = "docs"
+    , baseUrl = "http://localhost:8000"
     }
 
 main :: IO ()
