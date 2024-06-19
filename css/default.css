@@ -20,3 +20,25 @@ li {
 .date {
     margin-left: auto;
 }
+
+/* Default link color */
+a {
+    color: blue; /* Change to your desired color */
+    text-decoration: none; /* Optional: remove underline */
+}
+
+/* Visited link color */
+a:visited {
+    color: grey; /* Change to your desired color */
+}
+
+/* Hover state link color */
+a:hover {
+    color: orange; /* Change to your desired color */
+    text-decoration: underline; /* Optional: add underline on hover */
+}
+
+/* Active link color */
+a:active {
+    color: green; /* Change to your desired color */
+}
