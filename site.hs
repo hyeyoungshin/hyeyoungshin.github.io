@@ -2,6 +2,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 import           Data.Monoid (mappend)
 import           Hakyll
+import System.IO (hPutStrLn, stderr)
 
 
 --------------------------------------------------------------------------------
@@ -21,6 +22,15 @@ main = hakyll $ do
     match "css/*" $ do
         route   idRoute
         compile compressCssCompiler
+
+    match "timeline.html" $ do
+        unsafeCompiler $ hPutStrLn stderr "Processing timeline.html"
+        route idRoute
+        compile copyFileCompiler
+
+    -- match "timeline.html" $ do
+    --     route idRoute
+    --     compile copyFileCompiler
 
     match (fromList ["about.rst", "contact.markdown"]) $ do
         route   $ setExtension "html"
