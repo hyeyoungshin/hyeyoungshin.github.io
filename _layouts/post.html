@@ -3,6 +3,9 @@ layout: default
 ---
 
 <style>
+    /* Import JetBrains Mono font */
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+    
     .post-header {
         margin-bottom: 40px;
     }
@@ -47,15 +50,16 @@ layout: default
     }
 
     .post-content code {
-        background: var(--light-gray);
+         background: var(--light-gray);
         padding: 2px 6px;
         border-radius: 3px;
         font-size: 0.95em;
-        font-family: 'Courier New', monospace;
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 100;
     }
 
     .post-content pre {
-        background: var(--light-gray);
+        background: var(--dark-gray);
         padding: 20px;
         border-radius: 6px;
         overflow-x: auto;
@@ -67,6 +71,8 @@ layout: default
         background: none;
         padding: 0;
         font-size: 0.9em;
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 100;
     }
 
     .post-content ul, .post-content ol {
