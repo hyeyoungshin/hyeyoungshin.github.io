@@ -1,0 +1,22 @@
+# Site settings
+title: Hyeyoung Shin
+description: Software Engineer & Programming Languages Researcher
+url: https://hyeyoung.org
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: /notes/:year/:month/:day/:title/
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+# Collections (optional, for organizing notes)
+collections:
+  notes:
+    output: true
+    permalink: /notes/:year-:month-:day-:title/
+  
