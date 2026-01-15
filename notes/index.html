@@ -1,0 +1,101 @@
+---
+layout: default
+title: Notes
+---
+
+<style>
+    .notes-section h2 {
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin-bottom: 40px;
+        color: var(--primary-color);
+    }
+
+    .year-group {
+        margin-bottom: 50px;
+    }
+
+    .year-header {
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: var(--accent-color);
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--border-color);
+    }
+
+    .note-entry {
+        margin-bottom: 5px;
+    }
+
+    .note-link {
+        display: flex;
+        align-items: baseline;
+        gap: 20px;
+        padding: 15px 20px;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: background-color 0.2s ease;
+    }
+
+    .note-link:hover {
+        background-color: var(--light-gray);
+    }
+
+    .note-date {
+        font-size: 0.9rem;
+        color: var(--secondary-color);
+        font-weight: 500;
+        min-width: 60px;
+        flex-shrink: 0;
+    }
+
+    .note-title {
+        font-size: 1.1rem;
+        color: var(--primary-color);
+        flex: 1;
+        transition: color 0.2s ease;
+    }
+
+    .note-link:hover .note-title {
+        color: var(--accent-color);
+    }
+
+    @media (max-width: 768px) {
+        .note-link {
+            flex-direction: column;
+            gap: 5px;
+            padding: 12px 15px;
+        }
+
+        .note-date {
+            min-width: auto;
+            font-size: 0.85rem;
+        }
+
+        .note-title {
+            font-size: 1rem;
+        }
+    }
+</style>
+
+<section class="notes-section">
+    <h2>All Notes</h2>
+
+    {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+    
+    {% for year_group in posts_by_year %}
+    <div class="year-group">
+        <h3 class="year-header">{{ year_group.name }}</h3>
+        
+        {% for post in year_group.items %}
+        <div class="note-entry">
+            <a href="{{ post.url }}" class="note-link">
+                <span class="note-date">{{ post.date | date: "%b %d" }}</span>
+                <span class="note-title">{{ post.title }}</span>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</section>
