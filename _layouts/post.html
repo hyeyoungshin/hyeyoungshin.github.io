@@ -119,6 +119,94 @@ layout: default
     .back-link a:hover {
         opacity: 0.7;
     }
+
+    /* Side Navigation */
+    .side-nav {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 20px 16px;
+        background: var(--light-gray);
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        z-index: 100;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .side-nav:hover {
+        background: var(--accent-color);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .side-nav-left {
+        left: calc(50% - 500px); /* 400px (half of max-width 800px) + 50px margin */
+    }
+
+    .side-nav-right {
+        right: calc(50% - 500px); /* 400px (half of max-width 800px) + 50px margin */
+    }
+
+    .side-nav-arrow {
+        font-size: 2rem;
+        color: var(--accent-color);
+        font-weight: 300;
+        transition: color 0.3s ease;
+    }
+
+    .side-nav:hover .side-nav-arrow {
+        color: white;
+    }
+
+    .side-nav-label {
+        font-size: 0.75rem;
+        color: var(--secondary-color);
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        transition: color 0.3s ease;
+    }
+
+    .side-nav:hover .side-nav-label {
+        color: white;
+    }
+
+    /* Bottom Back Link */
+    .back-link {
+        margin-top: 50px;
+        padding-top: 30px;
+        border-top: 1px solid var(--border-color);
+        text-align: center;
+    }
+
+    .back-link a {
+        color: var(--accent-color);
+        text-decoration: none;
+        font-weight: 500;
+        padding: 12px 24px;
+        border: 2px solid var(--accent-color);
+        border-radius: 8px;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+
+    .back-link a:hover {
+        background: var(--accent-color);
+        color: white;
+    }
+
+    /* Mobile - hide side navigation */
+    @media (max-width: 1024px) {
+        .side-nav {
+            display: none;
+        }
+    }
 </style>
 
 <article class="post">
@@ -131,7 +219,21 @@ layout: default
         {{ content }}
     </div>
 
+    <!-- Side Navigation -->
+    {% if page.previous.url %}
+    <a href="{{ page.previous.url }}" class="side-nav side-nav-left" title="{{ page.previous.title }}">
+        <span class="side-nav-arrow">←</span>
+    </a>
+    {% endif %}
+
+    {% if page.next.url %}
+    <a href="{{ page.next.url }}" class="side-nav side-nav-right" title="{{ page.next.title }}">
+        <span class="side-nav-arrow">→</span>
+    </a>
+    {% endif %}
+
+    <!-- Bottom Navigation -->
     <div class="back-link">
-        <a href="/notes/">← Back to all notes</a>
+        <a href="/notes/">← All Notes</a>
     </div>
 </article>
