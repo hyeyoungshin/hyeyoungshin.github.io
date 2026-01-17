@@ -104,6 +104,32 @@ layout: default
         font-style: italic;
     }
 
+    /* Table styles */
+    .post-content table {
+        margin-left: 0;
+        margin-right: auto;
+        margin-bottom: 40px;  /* Add this line - increase for more space */
+        text-align: left;
+        border-collapse: collapse;
+        width: auto; /* or width: 100%; if you want full width */
+    }
+
+    .post-content th,
+    .post-content td {
+        text-align: left;
+        padding: 8px 12px;
+        border: 1px solid var(--border-color);
+    }
+
+    .post-content th {
+        background: var(--light-gray);
+        font-weight: 500;
+    }
+
+    .post-content tr:nth-child(even) {
+        background: var(--light-gray);
+    }
+
     .back-link {
         margin-top: 50px;
         padding-top: 30px;
