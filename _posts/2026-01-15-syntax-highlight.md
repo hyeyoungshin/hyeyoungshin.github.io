@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Adding syntax highlight is easy, but choosing a theme is not"
+title: "adding syntax highlight is easy, but choosing a theme is not"
 date: 2026-01-15
 ---
 
