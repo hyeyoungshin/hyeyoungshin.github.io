@@ -4,8 +4,6 @@ title: "function overloading vs dynamic dispatch"
 date: 2026-01-16
 ---
 
-## Two concepts that I mixed up
-
 I was writing a constructor for a datatype for one of my Rust projects. Then I thought of a scenario where having two functions that have the same name but with different parameters might be advantageous. This is not ambiguous because the compiler can know which one is being called based on the argument types the caller provides. I was trying to remember what this behavior is called... then it came to me "it's **Dynamic Dispatch**"! 
 
 Of course, I was wrong. It has "Dynamic" in the name (eye rolling). So I did some reading and here is what I found:

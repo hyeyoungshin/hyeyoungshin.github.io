@@ -4,8 +4,6 @@ title: "to match or not to match"
 date: 2026-01-18
 ---
 
-### To match or not to match
-
 In science, questions tend to have definitive answers—unlike in literature or philosophy, where interpretation reigns. This is a broad generalization, but it's one of the things I've always appreciated about studying science: there's truth, and there's the whole truth.
 
 So where is this coming from?

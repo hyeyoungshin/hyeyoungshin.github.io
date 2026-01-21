@@ -1,10 +1,9 @@
 ---
 layout: post
-title: "Functional Updates"
+title: "functional updates"
 date: 2026-01-20
 ---
 
-## Functional Updates
 I'm a big fan of functional programming, so naturally I want to handle state updates functionally. Coming from high-level languages, like Scala, where immutability was abstracted away, I thought it was enough to write functions that return new data rather than mutating existing data. But working in Rust forced me to understand the underlying mechanics: the distinction between **consuming ownership** and returning new values.
 
 ### Consuming vs Borrowing when Updating
