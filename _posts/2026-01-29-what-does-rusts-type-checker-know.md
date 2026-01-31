@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "adding syntax highlight is easy, but choosing a theme is not"
+title: "what does rusts type checker knows and does not know"
 date: 2026-01-29
 ---
 
