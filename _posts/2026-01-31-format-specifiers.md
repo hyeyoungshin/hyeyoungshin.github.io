@@ -104,6 +104,7 @@ Player alice (ID: 1)
 ```
 
 **Format Specifiers**
+
 | Specifier | Trait | Use case | Example output |
 |---|---|---|---|
 | `{}` | `Display` | User-facing output | `Player alice (ID: 1)`|
@@ -112,6 +113,7 @@ Player alice (ID: 1)
 | `{:p}` | `Pointer` | Memory address | `0x7ffd5e123456` |
 | `{:b}` | `Binary` | Binary format | `101000` |
 | `{:x}` | `LowerHex` | Hex format | `2a` |
+
 
 Most of the types I use already have `Debug` derived. If I want nicer output, I can implement `Display`.
 
