@@ -19,7 +19,7 @@ match num {  // num: i32
 Rust requires exhaustiveness based on what it can statically verify.
 
 
-### What Rust's Type Checker Knows (Compile Time/Ststic)
+### What Rust's Type Checker Knows (Compile Time/Static)
 
 1. Types
 
