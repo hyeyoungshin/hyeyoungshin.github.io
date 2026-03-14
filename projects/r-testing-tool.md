@@ -28,11 +28,11 @@ For each function we wanted to test, the fuzzer drew inputs from the database â€
 ## Why it's technically interesting
 A few things make this non-trivial:  
 
-The database design is custom-built for R's value model. It handles R's copy-on-write semantics, lazy evaluation, and the fact that R values carry rich metadata like attributes and class names. It uses fast hashing (XXH128) and compressed bitsets for efficient lookup.
+**The database design** is custom-built for R's value model. It handles R's copy-on-write semantics, lazy evaluation, and the fact that R values carry rich metadata like attributes and class names. It uses fast hashing (XXH128) and compressed bitsets for efficient lookup.
 
-The fuzzing strategy is closer to mutation-based fuzzing than pure random fuzzing. It uses previously successful calls as seeds and relaxes search parameters gradually, which is more effective than random generation for a language like R.
+**The fuzzing strategy** is closer to mutation-based fuzzing than pure random fuzzing. It uses previously successful calls as seeds and relaxes search parameters gradually, which is more effective than random generation for a language like R.
 
-The tracer hooks into an extended R virtual machine at the function exit and context jump events to capture calls without missing them even when R uses long jumps for control flow.
+**The tracer** hooks into an extended R virtual machine at the function exit and context jump events to capture calls without missing them even when R uses long jumps for control flow.
 
 
 ## What the results showed
