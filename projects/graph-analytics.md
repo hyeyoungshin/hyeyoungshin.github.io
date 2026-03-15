@@ -23,4 +23,4 @@ A relational knowledge graph represents data as a collection of relations, nodes
 
 
 ## How my work fits into this
-I was part of a small team building the graph analytics library. on top of this stack, implemented in Rel and exposed via a Python API. The engine team was responsible for the core query execution and optimization infrastructure. The language team owned Rel itself. My role sat at the intersection: I built graph algorithms (like shortest path, PageRank, centrality) that ran within the RKGS, benchmarked them against industry competitors, and worked with both teams when bugs or performance issues crossed boundaries.
+I was part of a small team building the graph analytics library. The library sits on top of this stack, implemented in Rel and exposed via a Python API. The engine team was responsible for the core query execution and optimization infrastructure. The language team owned Rel itself. My role sat at the intersection: I built graph algorithms (like shortest path, PageRank, centrality) that ran within the RKGS, benchmarked them against industry competitors, and worked with both teams when bugs or performance issues crossed boundaries.
