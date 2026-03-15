@@ -3,7 +3,7 @@ layout: default
 title: Graph Analytics Library
 ---
 
-[← Back](/)
+<!-- [← Back](/) -->
 
 # Graph Analytics Library
 

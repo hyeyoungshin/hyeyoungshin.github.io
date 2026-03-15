@@ -3,8 +3,6 @@ layout: default
 title: Data-Driven Testing Tool for R
 ---
 
-[← Back](/)
-
 # Data-Driven Testing Tool for R
 
 **R · Testing Frameworks · Data Analysis · Statistical Computing**

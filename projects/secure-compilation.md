@@ -3,8 +3,6 @@ layout: default
 title: Secure Compilation Verification
 ---
 
-[← Back](/)
-
 # Secure Compilation Verification
 
 **Formal Verification · Compilation Theory · Security Analysis**
