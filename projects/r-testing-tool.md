@@ -13,7 +13,7 @@ R is a dynamically typed language, which means functions don't declare what type
 ## The core idea
 Rather than generating random inputs from scratch (which doesn't work well for dynamic languages because the inputs need to be realistic and complex), we took a data-driven approach: first observe what values real R programs actually use, store them in a database, and then use those observed values as the raw material for fuzzing.
 
-The pipeline has two phases
+The pipeline has two phases.
 
 **Phase 1: Recording**
 
@@ -21,7 +21,7 @@ We ran large amounts of existing R executable code, examples, tests, and documen
 
 **Phase 2: Fuzzing**
 
-For each function we wanted to test, the fuzzer drew inputs from the database — values that were previously observed in real code — and called the function with those inputs. If a call succeeded (no errors, warnings, or crashes), it was recorded as a new call signature: a description of what types the function accepted and returned. The fuzzer gradually narrowed its search over time, starting broad and becoming more targeted as it accumulated successful calls.
+For each function we wanted to test, the fuzzer drew inputs from the database, values that were previously observed in real code, and called the function with those inputs. If a call succeeded (no errors, warnings, or crashes), it was recorded as a new call signature: a description of what types the function accepted and returned. The fuzzer gradually narrowed its search over time, starting broad and becoming more targeted as it accumulated successful calls.
 
 ## Why it's technically interesting
 A few things make this non-trivial:  
